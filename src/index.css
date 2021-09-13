@@ -5,9 +5,65 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: 16px;
+  background: #111;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+a{
+  color: #111;
+  text-decoration: none;
+}
+
+.card {
+  background-color: #fff;
+  padding: 1rem;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+img {
+  border-radius: 5px 5px 0 0;
+  width: inherit;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.cards {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2px 16px;
+  display: grid;
+  grid-gap: 1rem;
+}
+
+.loader {
+  border: 7px solid #f3f3f3;
+  border-top: 7px solid #555;
+  margin: 100px auto;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+@media (min-width: 600px) {
+  .cards { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 900px) {
+  .cards { grid-template-columns: repeat(4, 1fr); }
 }
