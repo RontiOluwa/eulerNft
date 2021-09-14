@@ -3,7 +3,7 @@ import React from 'react';
 export interface NftProps {
     image: string;
     name: string;
-    openseaLink: string
+    openseaLink: string;
 }
 
 function Nft({image, name, openseaLink}: NftProps) {
